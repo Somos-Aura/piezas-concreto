@@ -21,7 +21,7 @@ window.AE_CONFIG = {
   PRODUCTO: 'Piezas Decorativas en Concreto',
   VALOR: 30,
   MONEDA: 'USD',
-  FIN_OFERTA: '2026-12-01T04:59:59Z',          // 30 nov 2026, 11:59 p. m. hora Colombia
+  MINUTOS_OFERTA: 60,                          // duración del contador por persona (no se reinicia al volver)
   SRC_SIN_ORIGEN: 'directo'                    // src que se envía si la visita llega sin src ni utm
 };
 </script>
@@ -133,9 +133,10 @@ h1{font-family:Poppins,sans-serif;font-weight:800;font-size:29px;line-height:1.1
 .o-timer-t{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .cd{display:flex;align-items:center;gap:6px}
 .cd>b{font-family:Poppins,sans-serif;font-weight:900;font-size:22px;color:var(--gold)}
-.cd-box{width:62px;background:#fff;border:1px solid #E3D7C8;border-radius:10px;padding:8px 4px;text-align:center}
-.cd-box span{display:block;font-family:Poppins,sans-serif;font-weight:900;font-size:26px;line-height:1.1;color:var(--ink);font-variant-numeric:tabular-nums}
+.cd-box{width:72px;background:#fff;border:1px solid #E3D7C8;border-radius:10px;padding:8px 4px;text-align:center}
+.cd-box span{display:block;font-family:Poppins,sans-serif;font-weight:900;font-size:30px;line-height:1.1;color:var(--ink);font-variant-numeric:tabular-nums}
 .cd-box small{display:block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.o-done{font-size:14px;font-weight:800;color:var(--gold)}
 .o-card{position:relative;width:100%;margin-top:26px;background:#fff;border:2px solid var(--accent);border-radius:22px;padding:34px 18px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 0 0 6px rgba(232,163,23,.10),0 18px 40px rgba(0,0,0,.45)}
 .o-ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:6px 14px;border-radius:999px;box-shadow:0 3px 0 #B57E0F}
 .o-title{font-family:Poppins,sans-serif;font-weight:900;font-size:28px;line-height:1.1;text-transform:uppercase;color:var(--accent)}
@@ -355,17 +356,16 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
 <!-- 6. OFERTA -->
 <section class="offer" id="oferta">
   <div class="wrap">
-    <p class="o-badge">Oferta Black November</p>
-    <p class="o-until">solo hasta el 30 de noviembre</p>
+    <p class="o-badge">Oferta solo por hoy</p>
+    <p class="o-until">Reservado para ti por 60 minutos</p>
     <p class="o-note">Pago único. Acceso de por vida.</p>
     <div class="o-timer" id="o-timer">
       <p class="o-timer-t"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Esta oferta termina en</p>
       <div class="cd" aria-label="Tiempo restante de la oferta">
-        <div class="cd-box"><span id="cd-d">00</span><small>Días</small></div><b aria-hidden="true">:</b>
-        <div class="cd-box"><span id="cd-h">00</span><small>Horas</small></div><b aria-hidden="true">:</b>
-        <div class="cd-box"><span id="cd-m">00</span><small>Min</small></div><b aria-hidden="true">:</b>
-        <div class="cd-box"><span id="cd-s">00</span><small>Seg</small></div>
+        <div class="cd-box"><span id="cd-m">60</span><small>Minutos</small></div><b aria-hidden="true">:</b>
+        <div class="cd-box"><span id="cd-s">00</span><small>Segundos</small></div>
       </div>
+      <p class="o-done" id="o-done" hidden>El tiempo de esta oferta terminó</p>
     </div>
     <div class="o-card">
       <p class="o-ribbon">★ Precio especial ★</p>
@@ -492,7 +492,7 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
     <div class="pricebox">
       <p class="was">Precio habitual <s>150 USD</s></p>
       <p class="big">30 USD</p>
-      <p class="micro" style="margin:4px 0 14px">Pago único · Hasta el 30 de noviembre</p>
+      <p class="micro" style="margin:4px 0 14px">Pago único · Oferta solo por hoy</p>
       <a class="cta js-cta" data-boton="Cierre" href="https://go.hotmart.com/P107411580Q?ap=061d">Quiero mi acceso ahora <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
@@ -514,16 +514,21 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
 (function () {
   var C = window.AE_CONFIG;
 
-  /* ---------- Contador de la oferta ---------- */
-  var fin = Date.parse(C.FIN_OFERTA);
-  var el = { d: document.getElementById('cd-d'), h: document.getElementById('cd-h'), m: document.getElementById('cd-m'), s: document.getElementById('cd-s') };
+  /* ---------- Contador de la oferta: 60 min por persona, no se reinicia al volver ---------- */
+  var KEY_T = 'ae_oferta_hoy_piezas', DUR = C.MINUTOS_OFERTA * 6e4, inicio = Date.now();
+  try { var guardadoT = parseInt(localStorage.getItem(KEY_T), 10); if (guardadoT) inicio = guardadoT; else localStorage.setItem(KEY_T, String(inicio)); } catch (e) {}
+  var fin = inicio + DUR;
+  var el = { m: document.getElementById('cd-m'), s: document.getElementById('cd-s') };
   function dos(n) { return (n < 10 ? '0' : '') + n; }
   function tick() {
     var r = fin - Date.now();
-    if (r <= 0) { document.getElementById('o-timer').style.display = 'none'; clearInterval(t); return; }
-    el.d.textContent = dos(Math.floor(r / 864e5));
-    el.h.textContent = dos(Math.floor(r % 864e5 / 36e5));
-    el.m.textContent = dos(Math.floor(r % 36e5 / 6e4));
+    if (r <= 0) {
+      document.querySelector('.o-timer-t').style.display = 'none';
+      document.querySelector('#o-timer .cd').style.display = 'none';
+      document.getElementById('o-done').hidden = false;
+      clearInterval(t); return;
+    }
+    el.m.textContent = dos(Math.floor(r / 6e4));
     el.s.textContent = dos(Math.floor(r % 6e4 / 1e3));
   }
   var t = setInterval(tick, 1000); tick();
