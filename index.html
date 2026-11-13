@@ -21,7 +21,7 @@ window.AE_CONFIG = {
   PRODUCTO: 'Piezas Decorativas en Concreto',
   VALOR: 30,
   MONEDA: 'USD',
-  MINUTOS_OFERTA: 60,                          // duración del contador por persona (no se reinicia al volver)
+  MINUTOS_OFERTA: 60,                          // contador por persona: no se reinicia al volver; al llegar a 0 arranca de nuevo
   SRC_SIN_ORIGEN: 'directo'                    // src que se envía si la visita llega sin src ni utm
 };
 </script>
@@ -220,7 +220,7 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
   <div class="wrap">
     <p class="eyebrow">Mezclar · Poner precio · Vender · Repetir</p>
     <h1>Crea piezas decorativas en concreto <span class="acc">que no se rajen</span> y empieza a venderlas desde casa</h1>
-    <p class="sub">Paso a paso, con medidas exactas, materiales de tu país y acompañada por expertas. Toma solo 20 a 30 minutos al día.</p>
+    <p class="sub">Paso a paso, con medidas exactas, materiales de Colombia y acompañada por expertas. Toma solo 20 a 30 minutos al día.</p>
     <p class="rating"><span class="stars">★★★★★</span><span><strong>+4.000 alumnas</strong> ya aprendieron</span></p>
     <div class="hero-media">
       <div class="hm-frame">
@@ -338,75 +338,7 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
       </div>
     </div>
 
-    <a class="cta js-cta" data-boton="Temario" href="https://go.hotmart.com/P107411580Q?ap=061d">Quiero mi acceso ahora <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  </div>
-</section>
-
-<!-- 5. QUIÉNES TE ENSEÑAN -->
-<section class="sec">
-  <div class="wrap">
-    <h2 class="h2">Te enseñan dos arquitectas que viven del concreto</h2>
-    <img class="prof-img" src="img/profesoras-600.webp" srcset="img/profesoras-600.webp 600w, img/profesoras-900.webp 900w" sizes="(max-width: 600px) 100vw, 560px" width="600" height="900" loading="lazy" decoding="async" alt="Carolina Rivas y Juliana Naranjo con delantales de Concretur junto a piezas decorativas en concreto">
-    <p>Carolina Rivas y Juliana Naranjo son <strong>arquitectas de Cali, Colombia</strong>, y crearon Concretur, su taller de piezas decorativas en concreto.</p>
-    <p>Han acompañado a <strong>más de 4.000 alumnas</strong>, así que saben exactamente por qué fallan las piezas y cómo resolverlo, de la mezcla a la venta.</p>
-    <div class="note"><div class="note-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div><p><strong>Y no te dejan sola:</strong> te acompañan directamente y resuelven tus dudas mientras avanzas.</p></div>
-  </div>
-</section>
-
-<!-- 6. OFERTA -->
-<section class="offer" id="oferta">
-  <div class="wrap">
-    <div class="o-timer" id="o-timer">
-      <p class="o-timer-t"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Esta oferta termina en</p>
-      <div class="cd" aria-label="Tiempo restante de la oferta">
-        <div class="cd-box"><span id="cd-m">60</span><small>Minutos</small></div><b aria-hidden="true">:</b>
-        <div class="cd-box"><span id="cd-s">00</span><small>Segundos</small></div>
-      </div>
-      <p class="o-done" id="o-done" hidden>El tiempo de esta oferta terminó</p>
-    </div>
-    <div class="o-card">
-      <p class="o-ribbon">★ Solo por hoy ★</p>
-      <h2 class="o-title">Piezas decorativas en concreto</h2>
-      <p class="o-sub">Contenido completo + 7 bonos</p>
-      <img class="o-img" src="img/curso-600.webp" srcset="img/curso-600.webp 600w, img/curso-1100.webp 1100w" sizes="(max-width: 600px) 90vw, 520px" width="600" height="335" loading="lazy" decoding="async" alt="Carolina y Juliana con el contenido Piezas Decorativas en Concreto en una laptop, los 7 bonos y piezas terminadas">
-      <div class="o-was"><s>150 USD</s><span class="o-save">AHORRAS 80%</span></div>
-      <p class="o-price">30 USD</p>
-      <p class="o-meta">Pago único · Acceso inmediato · Garantía de 7 días</p>
-      <div class="o-list">
-        <div class="row" style="align-items:flex-start"><svg class="ico" style="margin-top:2px" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>+90 guías en video</strong> para piezas profesionales, desde la mezcla hasta la venta. De 0 a avanzado.</p></div>
-        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Acompañamiento de las profesoras</p></div>
-        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>10 piezas guiadas paso a paso</p></div>
-        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Proveedores de tu país</p></div>
-        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Costeo, empaque y catálogo para vender</p></div>
-        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Certificado de finalización</p></div>
-        <div class="row o-life"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>ACCESO DE POR VIDA</strong> · nunca vence</p></div>
-      </div>
-      <div class="o-bonus">
-        <div class="o-gift"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2531F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8c-1.5-3-5-3-5-1s3 1 5 1zM12 8c1.5-3 5-3 5-1s-3 1-5 1z"/></svg></div>
-        <div><p class="o-bonus-t">Los 7 bonos incluidos gratis</p><p class="o-bonus-v"><s>Valor 277 USD</s> <span class="o-tag">HOY: INCLUIDOS</span></p></div>
-      </div>
-      <a class="cta o-cta js-cta" data-boton="Oferta" href="https://go.hotmart.com/P107411580Q?ap=061d"><span>Quiero mi acceso · 30 USD</span><small>Pago seguro por Hotmart · Acceso inmediato por email</small></a>
-    </div>
-  </div>
-</section>
-
-<!-- 7. BONOS -->
-<section class="sec">
-  <div class="wrap">
-    <h2 class="h2">7 bonos incluidos con tu contenido</h2>
-    <div class="bono"><div class="bono-img"><img src="img/bono-1-pigmentos.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 1: Color con pigmentos en polvo y líquidos"></div><div><p class="kicker">Bono 1</p><h3>Color con pigmentos en polvo y líquidos</h3><p>Piezas de color parejo, sin manchas ni tonos opacos.</p><p class="val"><s>Valor 37 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
-    <div class="bono"><div class="bono-img"><img src="img/bono-2-swirling.webp" width="188" height="360" loading="lazy" decoding="async" alt="Portada del bono 2: Técnica swirling"></div><div><p class="kicker">Bono 2</p><h3>Técnica swirling (hidropintura)</h3><p>Efecto marmoleado en cofres y joyeros.</p><p class="val"><s>Valor 29 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
-    <div class="bono"><div class="bono-img"><img src="img/bono-3-acrilicos.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 3: Personaliza tus piezas con acrílicos"></div><div><p class="kicker">Bono 3</p><h3>Personaliza tus piezas con acrílicos</h3><p>Nombres, fechas y colores de cada evento.</p><p class="val"><s>Valor 15 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
-    <div class="bono"><div class="bono-img"><img src="img/bono-4-terrazo.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 4: Piezas en terrazo"></div><div><p class="kicker">Bono 4</p><h3>Piezas en terrazo</h3><p>El acabado más pedido en decoración, de principio a fin.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
-    <div class="bono"><div class="bono-img"><img src="img/bono-5-proveedores.webp" width="188" height="360" loading="lazy" decoding="async" alt="Portada del bono 5: Listado de proveedores por país"></div><div><p class="kicker">Bono 5</p><h3>Listado de proveedores por país</h3><p>Dónde conseguir moldes y materiales cerca de ti.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
-    <div class="bono"><div class="bono-img"><img src="img/bono-6-emprendimiento.webp" width="188" height="360" loading="lazy" decoding="async" alt="Portada del bono 6: Emprendimiento y posicionamiento digital"></div><div><p class="kicker">Bono 6</p><h3>Emprendimiento y posicionamiento digital</h3><p>Tu marca, tu logo, tus redes y tu catálogo en WhatsApp.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
-    <div class="bono"><div class="bono-img"><img src="img/bono-7-telegram.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 7: Grupo de Telegram con las profesoras"></div><div><p class="kicker">Bono 7</p><h3>Grupo de Telegram con las profesoras</h3><p>Resuelve tus dudas directamente con Carolina y Juliana.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
-    <div class="total">
-      <p style="font-size:14px;color:var(--sand)">Valor total de los 7 bonos</p>
-      <p style="font-family:Poppins,sans-serif;font-weight:900;font-size:30px"><s>277 USD</s></p>
-      <p style="font-size:15px;font-weight:700">Incluidos sin costo con tu contenido</p>
-    </div>
-    <a class="cta js-cta" data-boton="Bonos" href="https://go.hotmart.com/P107411580Q?ap=061d">Quiero mi acceso + 7 bonos <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="cta js-scroll" data-boton="Temario" href="#oferta">Quiero mi acceso ahora <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </section>
 
@@ -444,6 +376,73 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
   </div>
 </section>
 
+<!-- 6. OFERTA -->
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="o-timer" id="o-timer">
+      <p class="o-timer-t"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8A317" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg>Esta oferta termina en</p>
+      <div class="cd" aria-label="Tiempo restante de la oferta">
+        <div class="cd-box"><span id="cd-m">60</span><small>Minutos</small></div><b aria-hidden="true">:</b>
+        <div class="cd-box"><span id="cd-s">00</span><small>Segundos</small></div>
+      </div>
+    </div>
+    <div class="o-card">
+      <p class="o-ribbon">★ Solo por hoy ★</p>
+      <h2 class="o-title">Piezas decorativas en concreto</h2>
+      <p class="o-sub">Contenido completo + 7 bonos</p>
+      <img class="o-img" src="img/curso-600.webp" srcset="img/curso-600.webp 600w, img/curso-1100.webp 1100w" sizes="(max-width: 600px) 90vw, 520px" width="600" height="335" loading="lazy" decoding="async" alt="Carolina y Juliana con el contenido Piezas Decorativas en Concreto en una laptop, los 7 bonos y piezas terminadas">
+      <div class="o-was"><s>150 USD</s><span class="o-save">AHORRAS 80%</span></div>
+      <p class="o-price">30 USD</p>
+      <p class="o-meta">Pago único · Acceso inmediato · Garantía de 7 días</p>
+      <div class="o-list">
+        <div class="row" style="align-items:flex-start"><svg class="ico" style="margin-top:2px" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>+90 guías en video</strong> para piezas profesionales, desde la mezcla hasta la venta. De 0 a avanzado.</p></div>
+        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Acompañamiento de las profesoras</p></div>
+        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>10 piezas guiadas paso a paso</p></div>
+        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Proveedores en Colombia</p></div>
+        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Costeo, empaque y catálogo para vender</p></div>
+        <div class="row"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Certificado de finalización</p></div>
+        <div class="row o-life"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#168A3D"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>ACCESO DE POR VIDA</strong> · nunca vence</p></div>
+      </div>
+      <div class="o-bonus">
+        <div class="o-gift"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2531F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v9h14v-9M12 8c-1.5-3-5-3-5-1s3 1 5 1zM12 8c1.5-3 5-3 5-1s-3 1-5 1z"/></svg></div>
+        <div><p class="o-bonus-t">Los 7 bonos incluidos gratis</p><p class="o-bonus-v"><s>Valor 277 USD</s> <span class="o-tag">HOY: INCLUIDOS</span></p></div>
+      </div>
+      <a class="cta o-cta js-cta" data-boton="Oferta" href="https://go.hotmart.com/P107411580Q?ap=061d"><span>Quiero mi acceso · 30 USD</span><small>Pago seguro por Hotmart · Acceso inmediato por email</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- 7. BONOS -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="h2">7 bonos incluidos con tu contenido</h2>
+    <div class="bono"><div class="bono-img"><img src="img/bono-1-pigmentos.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 1: Color con pigmentos en polvo y líquidos"></div><div><p class="kicker">Bono 1</p><h3>Color con pigmentos en polvo y líquidos</h3><p>Piezas de color parejo, sin manchas ni tonos opacos.</p><p class="val"><s>Valor 37 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
+    <div class="bono"><div class="bono-img"><img src="img/bono-2-swirling.webp" width="188" height="360" loading="lazy" decoding="async" alt="Portada del bono 2: Técnica swirling"></div><div><p class="kicker">Bono 2</p><h3>Técnica swirling (hidropintura)</h3><p>Efecto marmoleado en cofres y joyeros.</p><p class="val"><s>Valor 29 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
+    <div class="bono"><div class="bono-img"><img src="img/bono-3-acrilicos.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 3: Personaliza tus piezas con acrílicos"></div><div><p class="kicker">Bono 3</p><h3>Personaliza tus piezas con acrílicos</h3><p>Nombres, fechas y colores de cada evento.</p><p class="val"><s>Valor 15 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
+    <div class="bono"><div class="bono-img"><img src="img/bono-4-terrazo.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 4: Piezas en terrazo"></div><div><p class="kicker">Bono 4</p><h3>Piezas en terrazo</h3><p>El acabado más pedido en decoración, de principio a fin.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
+    <div class="bono"><div class="bono-img"><img src="img/bono-5-proveedores.webp" width="188" height="360" loading="lazy" decoding="async" alt="Portada del bono 5: Listado de proveedores en Colombia"></div><div><p class="kicker">Bono 5</p><h3>Listado de proveedores en Colombia</h3><p>Dónde conseguir moldes y materiales cerca de ti.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
+    <div class="bono"><div class="bono-img"><img src="img/bono-6-emprendimiento.webp" width="188" height="360" loading="lazy" decoding="async" alt="Portada del bono 6: Emprendimiento y posicionamiento digital"></div><div><p class="kicker">Bono 6</p><h3>Emprendimiento y posicionamiento digital</h3><p>Tu marca, tu logo, tus redes y tu catálogo en WhatsApp.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
+    <div class="bono"><div class="bono-img"><img src="img/bono-7-telegram.webp" width="259" height="360" loading="lazy" decoding="async" alt="Portada del bono 7: Grupo de Telegram con las profesoras"></div><div><p class="kicker">Bono 7</p><h3>Grupo de Telegram con las profesoras</h3><p>Resuelve tus dudas directamente con Carolina y Juliana.</p><p class="val"><s>Valor 49 USD</s> <span class="tag">INCLUIDO</span></p></div></div>
+    <div class="total">
+      <p style="font-size:14px;color:var(--sand)">Valor total de los 7 bonos</p>
+      <p style="font-family:Poppins,sans-serif;font-weight:900;font-size:30px"><s>277 USD</s></p>
+      <p style="font-size:15px;font-weight:700">Incluidos sin costo con tu contenido</p>
+    </div>
+    <a class="cta js-cta" data-boton="Bonos" href="https://go.hotmart.com/P107411580Q?ap=061d">Quiero mi acceso + 7 bonos <svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- 5. QUIÉNES TE ENSEÑAN -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="h2">Te enseñan dos arquitectas que viven del concreto</h2>
+    <img class="prof-img" src="img/profesoras-600.webp" srcset="img/profesoras-600.webp 600w, img/profesoras-900.webp 900w" sizes="(max-width: 600px) 100vw, 560px" width="600" height="900" loading="lazy" decoding="async" alt="Carolina Rivas y Juliana Naranjo con delantales de Concretur junto a piezas decorativas en concreto">
+    <p>Carolina Rivas y Juliana Naranjo son <strong>arquitectas de Cali, Colombia</strong>, y crearon Concretur, su taller de piezas decorativas en concreto.</p>
+    <p>Han acompañado a <strong>más de 4.000 alumnas</strong>, así que saben exactamente por qué fallan las piezas y cómo resolverlo, de la mezcla a la venta.</p>
+    <div class="note"><div class="note-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div><p><strong>Y no te dejan sola:</strong> te acompañan directamente y resuelven tus dudas mientras avanzas.</p></div>
+  </div>
+</section>
+
 <!-- 9. GARANTÍA -->
 <section class="sec dark" style="padding:52px 20px">
   <div class="wrap" style="align-items:center;text-align:center;gap:16px">
@@ -463,7 +462,7 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
       <details><summary>¿Cómo recibo el acceso?</summary><p>Al instante. Apenas se confirma el pago, Hotmart te envía a tu email el acceso al contenido. Puedes verlo desde el celular o la computadora.</p></details>
       <details><summary>¿Necesito experiencia?</summary><p>No. El contenido empieza desde cero, con los materiales, las herramientas y lo que debes saber antes de tu primera mezcla.</p></details>
       <details><summary>¿Necesito horno?</summary><p>No. El concreto fragua con agua y tiempo, a temperatura ambiente, en tu mesa.</p></details>
-      <details><summary>¿Dónde consigo los moldes y materiales?</summary><p>Cemento, arena y pigmentos se consiguen en ferreterías. Recibes un listado de proveedores por país y aprendes a hacer moldes caseros con envases plásticos.</p></details>
+      <details><summary>¿Dónde consigo los moldes y materiales?</summary><p>Cemento, arena y pigmentos se consiguen en ferreterías. Recibes un listado de proveedores en Colombia y aprendes a hacer moldes caseros con envases plásticos.</p></details>
       <details><summary>¿Y si ya lo intenté y se me rajaron?</summary><p>Justo para eso está el contenido. Aprendes las medidas exactas, el curado y el momento de desmoldar, y hay un módulo completo para evitar fisuras y grietas.</p></details>
       <details><summary>¿Cuánto tiempo necesito al día?</summary><p>Entre 20 y 30 minutos. Avanzas a tu ritmo.</p></details>
       <details><summary>¿Cuánto tiempo tengo acceso?</summary><p>De por vida. Puedes repetir las clases cuantas veces quieras.</p></details>
@@ -510,24 +509,27 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
 (function () {
   var C = window.AE_CONFIG;
 
-  /* ---------- Contador de la oferta: 60 min por persona, no se reinicia al volver ---------- */
-  var KEY_T = 'ae_oferta_hoy_piezas', DUR = C.MINUTOS_OFERTA * 6e4, inicio = Date.now();
-  try { var guardadoT = parseInt(localStorage.getItem(KEY_T), 10); if (guardadoT) inicio = guardadoT; else localStorage.setItem(KEY_T, String(inicio)); } catch (e) {}
-  var fin = inicio + DUR;
+  /* ---------- Contador de la oferta: 60 min por persona; no se reinicia al volver,
+     y al llegar a cero arranca otros 60 min ---------- */
+  var KEY_T = 'ae_oferta_hoy_piezas', DUR = C.MINUTOS_OFERTA * 6e4;
+  function leerInicio() {
+    var ahora = Date.now(), ini = ahora;
+    try {
+      var g = parseInt(localStorage.getItem(KEY_T), 10);
+      if (g && ahora - g < DUR) ini = g; else localStorage.setItem(KEY_T, String(ahora));
+    } catch (e) {}
+    return ini;
+  }
+  var fin = leerInicio() + DUR;
   var el = { m: document.getElementById('cd-m'), s: document.getElementById('cd-s') };
   function dos(n) { return (n < 10 ? '0' : '') + n; }
   function tick() {
     var r = fin - Date.now();
-    if (r <= 0) {
-      document.querySelector('.o-timer-t').style.display = 'none';
-      document.querySelector('#o-timer .cd').style.display = 'none';
-      document.getElementById('o-done').hidden = false;
-      clearInterval(t); return;
-    }
+    if (r <= 0) { fin = leerInicio() + DUR; r = fin - Date.now(); }
     el.m.textContent = dos(Math.floor(r / 6e4));
     el.s.textContent = dos(Math.floor(r % 6e4 / 1e3));
   }
-  var t = setInterval(tick, 1000); tick();
+  setInterval(tick, 1000); tick();
 
   /* ---------- Origen de la visita (src, sck y utm) ---------- */
   var CLAVE = 'ae_origen_piezas_concreto';
@@ -613,7 +615,7 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
     });
   });
 
-  // Clic en botones: estándar InitiateCheckout + personalizado por botón (CTA_Temario, CTA_Oferta, CTA_Bonos, CTA_Cierre)
+  // Clic en botones: estándar InitiateCheckout + personalizado por botón (CTA_Oferta, CTA_Bonos, CTA_Cierre)
   botones.forEach(function (a) {
     a.addEventListener('click', function (e) {
       var boton = a.getAttribute('data-boton') || 'Otro';
