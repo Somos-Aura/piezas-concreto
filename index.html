@@ -217,6 +217,18 @@ h1{font-family:Poppins,sans-serif;font-weight:800;font-size:28px;line-height:1.1
 .t-body{padding:16px 18px;display:flex;flex-direction:column;gap:8px}
 .quote{font-size:16px;font-style:italic;color:var(--text)}
 .who{font-size:14px;font-weight:700;color:var(--ink)}
+.t-scroller{display:flex;align-items:stretch;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:4px 20px 12px;scroll-padding:0 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.t-scroller::-webkit-scrollbar{display:none}
+.t-scroller .card{flex:none;width:84%;max-width:340px;scroll-snap-align:start;display:flex;flex-direction:column;border:1px solid #EFE6DA}
+.t-scroller .t-img{height:190px}
+.t-scroller .quote{font-size:15px;line-height:1.5}
+.t-hint{margin-top:-8px;font-size:14px;color:var(--muted)}
+.mods{border-top:1px solid #EFE6DA;padding-top:4px}
+.mods summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;font-size:15px;font-weight:700;color:var(--accent)}
+.mods summary::-webkit-details-marker{display:none}
+.mods summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;background:var(--peach);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;line-height:1}
+.mods[open] summary::after{content:"−"}
+.mods[open] summary{margin-bottom:8px}
 .scroller{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .scroller::-webkit-scrollbar{display:none}
 .scroller img{flex:none;width:250px;scroll-snap-align:start;border-radius:16px;border:1px solid #E3D7C8;box-shadow:0 6px 18px rgba(42,38,34,.12);background:#fff}
@@ -299,17 +311,19 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
   <div class="wrap">
     <h2 class="h2">No necesitas saber hacerlo todo para comenzar. <span class="acc">Necesitas aprender el proceso correcto.</span></h2>
     <p class="sub" style="text-align:center">Mira lo que han conseguido otras personas al poner en práctica lo aprendido.</p>
-    <div class="card">
-      <img class="t-img" src="img/testimonio-nubia-600.webp" srcset="img/testimonio-nubia-600.webp 600w, img/testimonio-nubia-810.webp 810w" sizes="(max-width: 600px) 100vw, 560px" width="600" height="341" loading="lazy" decoding="async" alt="Piezas hechas por Nubia Vargas">
-      <div class="t-body"><p class="stars">★★★★★</p><p class="quote">“De los cursos que se venden en las redes este es el más didáctico con explicaciones claras, para iniciar desde cero que es mi caso Estoy por terminarlo, la orientación para crear logo y usar las redes esta muy claro y detallado me a ayudado muchísimo para iniciar mi emprendimiento. La Calidad es una parte muy importante al comprar un curso. Gracias”</p><p class="who">Nubia Vargas</p></div>
-    </div>
-    <div class="card">
-      <img class="t-img" src="img/testimonio-alba.webp" width="423" height="520" loading="lazy" decoding="async" alt="Piezas hechas por Alba Chavarro">
-      <div class="t-body"><p class="stars">★★★★★</p><p class="quote">“Es un curso muy bien explicado, dan toda la información para poder adquirir los materiales necesarios para poder realizar las piezas del curso en cualquier pais donde uno se encuentre y eso es muy útil, además del acompañamiento que brindan para poder resolver dudas, estoy muy contenta de haber adquirido este curso.”</p><p class="who">Alba Chavarro</p></div>
-    </div>
-    <div class="card">
-      <img class="t-img" src="img/testimonio-stella.webp" width="406" height="486" loading="lazy" decoding="async" alt="Piezas hechas por Stella Meneses">
-      <div class="t-body"><p class="stars">★★★★★</p><p class="quote">“Les comparto mis primeras piezas de cemento gris. Estoy muy contenta y más motivada para hacer mis siguientes piezas. Muchas gracias a las maestras por su apoyo y tiempo.”</p><p class="who">Stella Meneses</p></div>
+    <div class="t-scroller">
+      <div class="card">
+        <img class="t-img" src="img/testimonio-nubia-600.webp" srcset="img/testimonio-nubia-600.webp 600w, img/testimonio-nubia-810.webp 810w" sizes="(max-width: 600px) 100vw, 560px" width="600" height="341" loading="lazy" decoding="async" alt="Piezas hechas por Nubia Vargas">
+        <div class="t-body"><p class="stars">★★★★★</p><p class="quote">“De los cursos que se venden en las redes este es el más didáctico con explicaciones claras, para iniciar desde cero que es mi caso Estoy por terminarlo, la orientación para crear logo y usar las redes esta muy claro y detallado me a ayudado muchísimo para iniciar mi emprendimiento. La Calidad es una parte muy importante al comprar un curso. Gracias”</p><p class="who">Nubia Vargas</p></div>
+      </div>
+      <div class="card">
+        <img class="t-img" src="img/testimonio-alba.webp" width="423" height="520" loading="lazy" decoding="async" alt="Piezas hechas por Alba Chavarro">
+        <div class="t-body"><p class="stars">★★★★★</p><p class="quote">“Es un curso muy bien explicado, dan toda la información para poder adquirir los materiales necesarios para poder realizar las piezas del curso en cualquier pais donde uno se encuentre y eso es muy útil, además del acompañamiento que brindan para poder resolver dudas, estoy muy contenta de haber adquirido este curso.”</p><p class="who">Alba Chavarro</p></div>
+      </div>
+      <div class="card">
+        <img class="t-img" src="img/testimonio-stella.webp" width="406" height="486" loading="lazy" decoding="async" alt="Piezas hechas por Stella Meneses">
+        <div class="t-body"><p class="stars">★★★★★</p><p class="quote">“Les comparto mis primeras piezas de cemento gris. Estoy muy contenta y más motivada para hacer mis siguientes piezas. Muchas gracias a las maestras por su apoyo y tiempo.”</p><p class="who">Stella Meneses</p></div>
+      </div>
     </div>
     <p class="center" style="margin-top:8px;font-family:Poppins,sans-serif;font-weight:800;font-size:18px;color:var(--ink)">Sus creaciones, en sus propias palabras</p>
     <p class="center" style="margin-top:-10px;font-size:14px;color:var(--muted)">Desliza para ver más →</p>
@@ -342,13 +356,16 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
       <div class="card-body">
         <p class="kicker">Paso 1 · Módulos 1 a 4</p>
         <h3 class="h3">Las bases que los tutoriales no explican</h3>
-        <div class="list">
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Bienvenida, tus mentoras y cómo funciona el acompañamiento</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Materiales, herramientas, moldes, elementos de protección y listado de proveedores</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Qué es el concreto decorativo, cemento vs. yeso y por qué importa el paso a paso</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Curado inteligente</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Guía de mezclas: cemento, aditivo y fibra, el agua justa, cemento gris vs. blanco y cómo calcular la mezcla exacta para cada molde</p></div>
-        </div>
+        <details class="mods">
+          <summary>Ver qué aprendes en este paso</summary>
+          <div class="list">
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Bienvenida, tus mentoras y cómo funciona el acompañamiento</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Materiales, herramientas, moldes, elementos de protección y listado de proveedores</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Qué es el concreto decorativo, cemento vs. yeso y por qué importa el paso a paso</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Curado inteligente</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Guía de mezclas: cemento, aditivo y fibra, el agua justa, cemento gris vs. blanco y cómo calcular la mezcla exacta para cada molde</p></div>
+          </div>
+        </details>
       </div>
     </div>
 
@@ -357,13 +374,16 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
       <div class="card-body">
         <p class="kicker">Paso 2 · Módulos 5 a 9</p>
         <h3 class="h3">Fundición, acabado y sellado</h3>
-        <div class="list">
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Fundición en cemento gris y en cemento blanco: desmoldantes, preparación de la mezcla, vertido y vibrado, secado y ambiente ideal, y desmolde sin dramas</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Qué hacer con la mezcla sobrante y cómo limpiar tus recipientes</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Lijado en seco vs. con agua y pulido premium de piezas grises y blancas</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Sellado e impermeabilización</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Recomendaciones: cuidado de moldes, cómo evitar fisuras y grietas, qué hacer con los quiebres al desmoldar y cuando el color no sale bien</p></div>
-        </div>
+        <details class="mods">
+          <summary>Ver qué aprendes en este paso</summary>
+          <div class="list">
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Fundición en cemento gris y en cemento blanco: desmoldantes, preparación de la mezcla, vertido y vibrado, secado y ambiente ideal, y desmolde sin dramas</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Qué hacer con la mezcla sobrante y cómo limpiar tus recipientes</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Lijado en seco vs. con agua y pulido premium de piezas grises y blancas</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Sellado e impermeabilización</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Recomendaciones: cuidado de moldes, cómo evitar fisuras y grietas, qué hacer con los quiebres al desmoldar y cuando el color no sale bien</p></div>
+          </div>
+        </details>
       </div>
     </div>
 
@@ -372,19 +392,22 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
       <div class="card-body">
         <p class="kicker">Paso 3 · Módulos 10 a 20</p>
         <h3 class="h3">10 piezas guiadas paso a paso</h3>
-        <div class="list">
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Técnicas para elevar tus piezas</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Incensario marmoleado</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Soporte para espejo marmoleado con pigmentos líquidos</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Cofre con pigmentos en polvo</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Matera microterrazo con formaleta plástica</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Bandeja con terrazo en concreto</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Portavasos con terrazo en granito pulido</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Bandeja con laminilla dorada</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Cofre y joyero con swirling (hidropintura)</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Maceta y topepuerta con moldes caseros</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Personalización con pintura acrílica y brillo final</p></div>
-        </div>
+        <details class="mods">
+          <summary>Ver qué aprendes en este paso</summary>
+          <div class="list">
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Técnicas para elevar tus piezas</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Incensario marmoleado</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Soporte para espejo marmoleado con pigmentos líquidos</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Cofre con pigmentos en polvo</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Matera microterrazo con formaleta plástica</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Bandeja con terrazo en concreto</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Portavasos con terrazo en granito pulido</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Bandeja con laminilla dorada</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Cofre y joyero con swirling (hidropintura)</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Maceta y topepuerta con moldes caseros</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Personalización con pintura acrílica y brillo final</p></div>
+          </div>
+        </details>
       </div>
     </div>
 
@@ -393,12 +416,15 @@ footer p:first-child{font-size:13px;font-weight:700;color:var(--sand)}
       <div class="card-body">
         <p class="kicker">Paso 4 · Módulos 21 a 23</p>
         <h3 class="h3">Tu marca y tus ventas</h3>
-        <div class="list">
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Costeo y rentabilidad: cuánto te cuesta cada pieza y cuánto cobrar</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Inicios del emprendimiento y empaque de tus productos</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Posicionamiento digital con Gaby Vargas: marca comercial, logo en Canva, redes sociales, creación de contenido, WhatsApp Business y catálogo digital</p></div>
-          <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Tu certificado de finalización</p></div>
-        </div>
+        <details class="mods">
+          <summary>Ver qué aprendes en este paso</summary>
+          <div class="list">
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Costeo y rentabilidad: cuánto te cuesta cada pieza y cuánto cobrar</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Inicios del emprendimiento y empaque de tus productos</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Posicionamiento digital con Gaby Vargas: marca comercial, logo en Canva, redes sociales, creación de contenido, WhatsApp Business y catálogo digital</p></div>
+            <div class="row"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" style="margin-top:3px" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#C2531F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Tu certificado de finalización</p></div>
+          </div>
+        </details>
       </div>
     </div>
 
